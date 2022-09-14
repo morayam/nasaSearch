@@ -1,3 +1,14 @@
 main {
     min-height: calc(100vh - 160px);
   }
+
+  /*Para alinear el tamaño de las descripciones*/
+  .descripcion {
+    max-height: 150px;
+  }
+  /*Para dejar las imagenes del mismo tamaño*/
+  img{
+    height:300px !important;
+    width:300px !important;
+    object-fit: cover;
+  }
