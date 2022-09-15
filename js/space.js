@@ -1,3 +1,7 @@
+/*
+  Agustin Barboza, Sergio Costa, Sebastián Brun, Maria Noel Correa, Yamila Morales
+*/
+
 let getJSONData = function (url) {
   let result = {};
 
@@ -25,19 +29,18 @@ function showPlanets(planetArray) {
   let elementos = '';
   for (const item of planetArray) {
     //Se agrega if porque hay casos que item.links es undefined
-    if(item.links != undefined) {
+    if (item.links != undefined) {
       //Se agrega la clase en el p para que este la barra de scroll
-    elementos += `
+      elementos += `
     <div class='container col-3'>
-      <img src='${item.links[0].href}' class='img-fluid'>
+      <img src='${item.links[0].href}' class='img-fluid '>
       <br>
       <h3>${item.data[0].title}</h3>
       <p>${item.data[0].date_created}</p>
       <p class="descripcion overflow-auto">${item.data[0].description}</p>
     </div>`;
+    }
   }
- 
-}
   document.getElementById('contenedor').innerHTML = elementos;
 }
 
@@ -55,5 +58,3 @@ addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-
